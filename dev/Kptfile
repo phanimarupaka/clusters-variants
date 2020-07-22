@@ -1,0 +1,13 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: cluster-dev
+packageMetadata:
+    shortDescription: sample description
+dependencies:
+  - name: base
+    git:
+        repo: git@github.com:phanimarupaka/clusters-base
+        directory: /
+        ref: v0.1.0
+    updateStrategy: resource-merge
